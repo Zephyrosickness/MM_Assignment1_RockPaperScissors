@@ -9,10 +9,10 @@ public class RockPaperScissors {
         char player1; //you don't need to initalize a variable unless you're doing operations with them (like comparisons or math)
         char player2;
 
-        System.out.println("Welcome to Rock, Paper, Scissors! Player 1, please input your choice: Rock, Paper, or Scissors? [R, P,S]");
-        DetermineInput(player1);
+        System.out.println("Welcome to Rock, Paper, Scissors!\nPlayer 1, please input your choice: Rock, Paper, or Scissors? [R, P,S]");
+        char player1 = DetermineInput(); //sets player1 to determined output
         System.out.println("Player 2, please input your choice: Rock, Paper, or Scissors? [R, P,S]");
-        DetermineInput(player2);
+        char player2 = DetermineInput(); //runs determineoutput method and then sets player2 to the returned value
 
     }
 
@@ -51,9 +51,8 @@ public class RockPaperScissors {
                 System.out.println("You've input an invalid response. Please try again.");
                 scan.nextLine();
                 }
+            return(input); //returns the input value
         } while (!validInput);
     }
 
 }
-
-
